@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Scoops from "./components/Scoops"
+import Toppings from './components/Toppings';
+import Form from './components/Form';
+// bileşenlerin içinde index yaptık ki import ederken klasör adı yeterli olsun 
+// ama index değil de scoops.jsx olsaydı o zaman klasörün içindeki scoops.jsx diye belirtmek gerekirdi bu da importu karıştırırdı
+// özellikle bir klasörün içinde içinde birden fazla bileşen varsa bunu tercih ediyoruz
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Scoops/>
+      <Toppings/>
+      <Form/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
