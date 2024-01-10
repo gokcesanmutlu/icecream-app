@@ -1,4 +1,5 @@
 const Card = ({ item, setBasket, basket }) => {
+    console.log(basket)
     // karttaki üründen sepette kaç tane var bulma
     const found = basket.filter(i => i.name === item.name)
     const amount = found.length;
@@ -22,7 +23,7 @@ const Card = ({ item, setBasket, basket }) => {
                     className="btn btn-sm btn-outline-danger">
                     Reset
                 </button>
-                <span className="fs-2">{amount}</span>
+                <span data-testid="amount" className="fs-2">{amount}</span>
                 <button
                     onClick={() => setBasket([...basket, item])}
                     className="btn btn-sm btn-outline-success">
